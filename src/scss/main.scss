@@ -7,7 +7,6 @@
 // // @use "themes";
 
 
-
 // @use "--examples--/lesson-05/variables";
 // @use "--examples--/lesson-05/button";
 // @use "--examples--/lesson-05/scopes";
@@ -20,7 +19,10 @@
 
 // Examples lesson 07
 // @use "--examples--/lesson-07/math";
-// @use "--examples--/lesson-07/task-badge";
+// @use "--examples--/lesson-07/task";
+// @use "--examples--/lesson-07/badge";
+//?? @use "--examples--/lesson-07/task-badge";
+
 // @use "base/fonts";
 // @use "components/task";
 
@@ -30,13 +32,15 @@
 // @use "--examples--/lesson-09/extend";
 
 // Examples lesson 10
+
 // @use "base/fonts";
 // @use "components/button";
 // @use "--examples--/lesson-10/mixins";
 
 // Examples lesson 11
-// @use "base/fonts";
-// @use "components/button";
+@use "base/fonts";
+@use "components/button";
+/* == BEGIN == */
 // @use "--examples--/lesson-11/if";
 // @use "--examples--/lesson-11/each";
 // @use "--examples--/lesson-11/for";

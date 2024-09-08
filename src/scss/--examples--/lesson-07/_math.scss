@@ -6,11 +6,13 @@
   width: 600px + 30px;
   width: 600px - 30px;
 }
+
 /*|============================
   | Множення & Ділення
   |============================
 */
 $vaule: 600px;
+
 .box {
   width: 600px * 5;
   width: 600px * 2 + 50px;
@@ -20,15 +22,23 @@ $vaule: 600px;
   width: (600px / 2);
   width: 600px / 3 + 100px;
 }
+
 /*|============================
   | Інтерполяція
   |============================
 */
+$name: "boxx";
 $margin: 100px;
+
 .box {
   width: $margin * 2;
 }
+
 .box {
   width: calc($margin * 2);
   width: calc(#{$margin} * 2);
+}
+
+.#{$name} {
+  width: calc(400px - #{$margin});
 }
