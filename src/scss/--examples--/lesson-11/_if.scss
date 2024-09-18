@@ -13,6 +13,7 @@
 .square-avatar {
   @include avatar(100px);
 }
+
 .circle-avatar {
   @include avatar(100px, $circle: true);
 }
@@ -26,19 +27,25 @@
   }
 
   @if $lh {
-    @if $lh == normal {
+    @if $lh ==normal {
       line-height: normal;
-    } @else if math.unit($lh) == "px" {
+    }
+
+    @else if math.unit($lh)=="px" {
       line-height: calc($lh / $fs);
-    } @else {
+    }
+
+    @else {
       @error "$lh value #{$lh} is incorrect";
     }
   }
 
   @if $ls {
-    @if $ls == normal {
+    @if $ls ==normal {
       letter-spacing: normal;
-    } @else {
+    }
+
+    @else {
       letter-spacing: #{calc($ls/$fs)}em;
     }
   }

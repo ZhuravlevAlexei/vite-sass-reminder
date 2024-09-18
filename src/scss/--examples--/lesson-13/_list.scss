@@ -25,17 +25,20 @@ $sizes: 40px, 50px, 80px;
 }
 
 // use list with @for
-$button-types: ".btn-sm", ".btn-md", ".btn-lg", ".btn-xl";
+$button-types: ".btn-sm", ".btn-md", ".btn-lg", ".btn-xl",
+  ".btn-xxl", ".btn-xxxl";
 
 @mixin btn-size($types) {
   @for $i from 1 through list.length($types) {
     #{list.nth($types, $i)} {
-      $factor: ($i * 5 - 5);
+      $factor: (
+        $i * 5 - 5
+      );
 
-      padding: (5px + $factor) (10px + $factor);
-      border-radius: (10px + $factor);
-    }
+    padding: (5px + $factor) (10px + $factor);
+    border-radius: (10px + $factor);
   }
+}
 }
 
 @include btn-size($button-types);
